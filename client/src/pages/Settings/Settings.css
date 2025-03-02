@@ -1,0 +1,108 @@
+.settings-page {
+  padding: 1rem;
+}
+
+.settings-page h1 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: var(--text-color);
+}
+
+.settings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.settings-grid .card {
+  height: fit-content;
+}
+
+.settings-grid h2 {
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}
+
+.profile-settings form,
+.notification-settings form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+}
+
+.danger-zone h2 {
+  color: var(--accent-color);
+}
+
+.danger-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.danger-action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.danger-action h3 {
+  margin: 0;
+  color: var(--text-color);
+}
+
+.danger-action p {
+  margin: 0.5rem 0 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.button-danger {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.button-danger:hover {
+  background-color: #c0392b;
+}
+
+select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: white;
+}
+
+@media (max-width: 768px) {
+  .settings-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .danger-action {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+} 

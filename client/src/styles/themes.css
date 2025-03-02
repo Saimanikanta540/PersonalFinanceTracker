@@ -1,0 +1,522 @@
+/* Base styles for width consistency */
+html, body {
+  width: 100%;
+  min-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Modern Theme Variables */
+:root {
+  /* Modern Light Theme */
+  --background-color: #ffffff;
+  --background-gradient: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%);
+  --card-background: #ffffff;
+  --text-color: #2d3748;
+  --border-color: #e2e8f0;
+  --primary-color: #4f46e5;
+  --primary-color-rgb: 79, 70, 229;
+  --secondary-color: #7c3aed;
+  --secondary-color-rgb: 124, 58, 237;
+  --accent-color: #f43f5e;
+  --accent-color-rgb: 244, 63, 94;
+  --success-color: #10b981;
+  --success-color-rgb: 16, 185, 129;
+  --hover-color: #f8fafc;
+  --gradient-start: #4f46e5;
+  --gradient-end: #7c3aed;
+  --shadow-color: rgba(79, 70, 229, 0.1);
+  --card-shadow: 0 8px 16px var(--shadow-color);
+  --text-secondary: #64748b;
+  --highlight-color: #e0e7ff;
+}
+
+/* Neo Dark Theme */
+[data-theme="dark"] {
+  --background-color: #0f172a;
+  --background-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+  --card-background: #1e1b4b;
+  --text-color: #f8fafc;
+  --border-color: #312e81;
+  --primary-color: #818cf8;
+  --primary-color-rgb: 129, 140, 248;
+  --secondary-color: #a78bfa;
+  --secondary-color-rgb: 167, 139, 250;
+  --accent-color: #fb7185;
+  --accent-color-rgb: 251, 113, 133;
+  --success-color: #34d399;
+  --success-color-rgb: 52, 211, 153;
+  --hover-color: #2e1065;
+  --gradient-start: #818cf8;
+  --gradient-end: #a78bfa;
+  --shadow-color: rgba(129, 140, 248, 0.2);
+  --card-shadow: 0 8px 16px var(--shadow-color);
+  --text-secondary: #a5b4fc;
+  --highlight-color: #312e81;
+}
+
+/* Electric Blue Theme */
+[data-theme="electric"] {
+  --background-color: #0c0a1d;
+  --background-gradient: linear-gradient(135deg, #0c0a1d 0%, #1a103c 100%);
+  --card-background: #1a103c;
+  --text-color: #eef2ff;
+  --border-color: #3730a3;
+  --primary-color: #60a5fa;
+  --primary-color-rgb: 96, 165, 250;
+  --secondary-color: #34d399;
+  --secondary-color-rgb: 52, 211, 153;
+  --accent-color: #f472b6;
+  --accent-color-rgb: 244, 114, 182;
+  --success-color: #34d399;
+  --success-color-rgb: 52, 211, 153;
+  --hover-color: #2e1065;
+  --gradient-start: #60a5fa;
+  --gradient-end: #34d399;
+  --shadow-color: rgba(96, 165, 250, 0.2);
+  --card-shadow: 0 8px 20px var(--shadow-color);
+  --text-secondary: #93c5fd;
+  --highlight-color: #1e40af;
+}
+
+/* Sunset Gold Theme */
+[data-theme="sunset"] {
+  --background-color: #fff7ed;
+  --background-gradient: linear-gradient(135deg, #fff7ed 0%, #fef3c7 100%);
+  --card-background: #ffffff;
+  --text-color: #92400e;
+  --border-color: #fed7aa;
+  --primary-color: #f59e0b;
+  --primary-color-rgb: 245, 158, 11;
+  --secondary-color: #d97706;
+  --secondary-color-rgb: 217, 119, 6;
+  --accent-color: #e11d48;
+  --accent-color-rgb: 225, 29, 72;
+  --success-color: #059669;
+  --success-color-rgb: 5, 150, 105;
+  --hover-color: #fffbeb;
+  --gradient-start: #f59e0b;
+  --gradient-end: #d97706;
+  --shadow-color: rgba(245, 158, 11, 0.1);
+  --card-shadow: 0 8px 16px var(--shadow-color);
+  --text-secondary: #b45309;
+  --highlight-color: #fef3c7;
+}
+
+/* Ocean Theme - Enhanced blues */
+[data-theme="ocean"] {
+  --background-color: #ecfeff;
+  --background-gradient: linear-gradient(135deg, #ecfeff 0%, #bae6fd 100%);
+  --card-background: #ffffff;
+  --text-color: #164e63;
+  --border-color: #a5f3fc;
+  --primary-color: #0891b2;
+  --secondary-color: #0e7490;
+  --accent-color: #e11d48;
+  --success-color: #059669;
+  --hover-color: #cffafe;
+  --gradient-start: #06b6d4;
+  --gradient-end: #0891b2;
+  --shadow-color: rgba(6, 182, 212, 0.1);
+  --card-shadow: 0 4px 6px var(--shadow-color);
+  --text-secondary: #0e7490;
+  --highlight-color: #67e8f9;
+}
+
+/* Forest Theme - Richer greens */
+[data-theme="forest"] {
+  --background-color: #ecfdf5;
+  --background-gradient: linear-gradient(135deg, #ecfdf5 0%, #bbf7d0 100%);
+  --card-background: #ffffff;
+  --text-color: #064e3b;
+  --border-color: #6ee7b7;
+  --primary-color: #059669;
+  --secondary-color: #047857;
+  --accent-color: #dc2626;
+  --success-color: #10b981;
+  --hover-color: #d1fae5;
+  --gradient-start: #10b981;
+  --gradient-end: #059669;
+  --shadow-color: rgba(5, 150, 105, 0.1);
+  --card-shadow: 0 4px 6px var(--shadow-color);
+  --text-secondary: #047857;
+  --highlight-color: #86efac;
+}
+
+/* Purple Rain Theme - More vibrant purples */
+[data-theme="purple-rain"] {
+  --background-color: #faf5ff;
+  --background-gradient: linear-gradient(135deg, #faf5ff 0%, #e9d5ff 100%);
+  --card-background: #ffffff;
+  --text-color: #581c87;
+  --border-color: #e9d5ff;
+  --primary-color: #9333ea;
+  --secondary-color: #7e22ce;
+  --accent-color: #e11d48;
+  --success-color: #16a34a;
+  --hover-color: #f3e8ff;
+  --gradient-start: #a855f7;
+  --gradient-end: #9333ea;
+  --shadow-color: rgba(147, 51, 234, 0.1);
+  --card-shadow: 0 4px 6px var(--shadow-color);
+  --text-secondary: #7e22ce;
+  --highlight-color: #d8b4fe;
+}
+
+/* New Theme: Midnight Blue */
+[data-theme="midnight"] {
+  --background-color: #030712;
+  --background-gradient: linear-gradient(135deg, #030712 0%, #111827 100%);
+  --card-background: #111827;
+  --text-color: #f1f5f9;
+  --border-color: #1f2937;
+  --primary-color: #3b82f6;
+  --secondary-color: #1d4ed8;
+  --accent-color: #f43f5e;
+  --success-color: #22c55e;
+  --hover-color: #1f2937;
+  --gradient-start: #1e3a8a;
+  --gradient-end: #1e40af;
+  --shadow-color: rgba(0, 0, 0, 0.5);
+  --card-shadow: 0 4px 6px var(--shadow-color);
+  --text-secondary: #64748b;
+  --highlight-color: #1e40af;
+}
+
+/* New Theme: Rose Garden */
+[data-theme="rose"] {
+  --background-color: #fff1f2;
+  --background-gradient: linear-gradient(135deg, #fff1f2 0%, #fecdd3 100%);
+  --card-background: #ffffff;
+  --text-color: #881337;
+  --border-color: #fecdd3;
+  --primary-color: #e11d48;
+  --secondary-color: #be123c;
+  --accent-color: #4f46e5;
+  --success-color: #16a34a;
+  --hover-color: #ffe4e6;
+  --gradient-start: #fb7185;
+  --gradient-end: #e11d48;
+  --shadow-color: rgba(225, 29, 72, 0.1);
+  --card-shadow: 0 4px 6px var(--shadow-color);
+  --text-secondary: #9f1239;
+  --highlight-color: #fda4af;
+}
+
+/* New Theme: Emerald Night */
+[data-theme="emerald"] {
+  --background-color: #022c22;
+  --background-gradient: linear-gradient(135deg, #022c22 0%, #064e3b 100%);
+  --card-background: #064e3b;
+  --text-color: #ecfdf5;
+  --border-color: #065f46;
+  --primary-color: #10b981;
+  --secondary-color: #059669;
+  --accent-color: #f43f5e;
+  --success-color: #34d399;
+  --hover-color: #065f46;
+  --gradient-start: #059669;
+  --gradient-end: #047857;
+  --shadow-color: rgba(16, 185, 129, 0.2);
+  --card-shadow: 0 4px 6px var(--shadow-color);
+  --text-secondary: #6ee7b7;
+  --highlight-color: #34d399;
+}
+
+/* Apply background gradient to body */
+body {
+  background: var(--background-gradient);
+  min-height: 100vh;
+  width: 100%;
+  min-width: 100%;
+  transition: background 0.3s ease;
+}
+
+/* Apply gradients and transitions to elements */
+.card,
+.button,
+.nav-item {
+  width: 100%;
+  background: linear-gradient(
+    135deg,
+    var(--gradient-start) 0%,
+    var(--gradient-end) 100%
+  );
+  transition: all 0.3s ease;
+}
+
+/* Glass effect variations */
+.glass-effect {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-effect-dark {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* Theme-specific box shadows */
+.elevated {
+  width: 100%;
+  box-shadow: var(--card-shadow);
+}
+
+.elevated-hover:hover {
+  box-shadow: 0 8px 12px var(--shadow-color);
+  transform: translateY(-2px);
+}
+
+/* Theme-specific text gradients */
+.gradient-text {
+  width: 100%;
+  background: linear-gradient(
+    135deg,
+    var(--gradient-start) 0%,
+    var(--gradient-end) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* New utility classes */
+.highlight {
+  width: 100%;
+  background-color: var(--highlight-color);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.border-gradient {
+  width: 100%;
+  border: 2px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+}
+
+.glow {
+  width: 100%;
+  box-shadow: 0 0 15px var(--primary-color);
+}
+
+.glow-hover:hover {
+  box-shadow: 0 0 20px var(--primary-color);
+}
+
+.text-shadow {
+  width: 100%;
+  text-shadow: 2px 2px 4px var(--shadow-color);
+}
+
+.backdrop-blur {
+  width: 100%;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Animation classes */
+.pulse {
+  width: 100%;
+  animation: pulse 2s infinite;
+}
+
+.float {
+  width: 100%;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Container classes */
+.full-width-container {
+  width: 100%;
+  min-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.content-container {
+  width: 100%;
+  min-width: 100%;
+  padding: 1rem;
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .content-container {
+    padding: 0.5rem;
+  }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* Smooth transitions for theme changes */
+* {
+  transition: background-color 0.3s ease,
+              color 0.3s ease,
+              border-color 0.3s ease,
+              box-shadow 0.3s ease,
+              transform 0.3s ease;
+}
+
+/* Advanced Effects */
+.glass-morphism {
+  background: rgba(var(--card-background-rgb), 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(var(--border-color-rgb), 0.2);
+}
+
+.gradient-border {
+  position: relative;
+  border: double 1px transparent;
+  border-radius: 12px;
+  background-image: linear-gradient(var(--card-background), var(--card-background)), 
+                    linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.shadow-glow {
+  box-shadow: 0 0 15px rgba(var(--primary-color-rgb), 0.3);
+}
+
+.text-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color) 0%,
+    var(--secondary-color) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Advanced Animations */
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+.hover-float {
+  transition: transform 0.3s ease;
+}
+
+.hover-float:hover {
+  transform: translateY(-5px);
+}
+
+.hover-glow {
+  transition: box-shadow 0.3s ease;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(var(--primary-color-rgb), 0.4);
+}
+
+/* Logo Styles */
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.logo-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color) 0%,
+    var(--secondary-color) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 900;
+  box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+.logo-text {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color) 0%,
+    var(--secondary-color) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Modern Card Effects */
+.card-modern {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.card-gradient {
+  background: linear-gradient(
+    135deg,
+    rgba(var(--primary-color-rgb), 0.1) 0%,
+    rgba(var(--secondary-color-rgb), 0.1) 100%
+  );
+  border: 1px solid rgba(var(--primary-color-rgb), 0.2);
+}
+
+/* Animated Gradients */
+.gradient-animate {
+  background: linear-gradient(
+    270deg,
+    var(--primary-color),
+    var(--secondary-color),
+    var(--accent-color)
+  );
+  background-size: 200% 200%;
+  animation: gradient 8s ease infinite;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Neon Effects */
+.neon-text {
+  color: var(--primary-color);
+  text-shadow: 0 0 10px var(--primary-color),
+               0 0 20px var(--primary-color),
+               0 0 30px var(--primary-color);
+}
+
+.neon-border {
+  border: 2px solid var(--primary-color);
+  box-shadow: 0 0 10px var(--primary-color),
+              inset 0 0 10px var(--primary-color);
+} 
